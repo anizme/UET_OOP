@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "W4.Main",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
             "name": "StudentManagement",
             "request": "launch",
             "mainClass": "W2.StudentManagement",
