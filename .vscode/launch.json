@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StudentManagement",
+            "request": "launch",
+            "mainClass": "W2.StudentManagement",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "StudentManagement",
+            "request": "launch",
+            "mainClass": "StudentManagement",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "RegexTest",
+            "request": "launch",
+            "mainClass": "RegexTest",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Human",
+            "request": "launch",
+            "mainClass": "Human",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "JAVA_71bdb5a6"
+        }
+    ]
+}
