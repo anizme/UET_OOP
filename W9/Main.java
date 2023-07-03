@@ -24,7 +24,5 @@ public class Main {
         c1_a1.addTransaction(c1_a1_t1);
         c1_a2.addTransaction(c1_a1_t1);
         System.out.println(c1_a2.getTransactionHistory());
-
-
     }
 }
