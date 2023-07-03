@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Layer ly = new Layer();
         Point p = new Point(1, 1);
-        Shape c = new Circle(p, 1, "BLUE", true);
-        Shape s = new Square(p, 1, "WHITE", true);
-        Shape r = new Rectangle(1, 2, "GREEN", false);
+        Circle c = new Circle(p, 1, "BLUE", true);
+        Square s = new Square(p, 1, "WHITE", true);
+        Rectangle r = new Rectangle(1, 2, "GREEN", false);
         ly.addShape(r);
         ly.addShape(c);
         ly.addShape(s);
