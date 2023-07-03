@@ -8,11 +8,11 @@ public class Square extends Rectangle {
     public Square(double side) {
         super(side, side);
     }
-    public Square(double side, String s, boolean b) {
-        super(side, side, s, b);
+    public Square(double side, String color, boolean filled) {
+        super(side, side, color, filled);
     }
-    public Square(Point p, double side, String s, boolean b) {
-        super(p, side, side, s, b);
+    public Square(Point topLeft, double side, String color, boolean filled) {
+        super(topLeft, side, side, color, filled);
     }
     //setter
     public void setSide(double side){

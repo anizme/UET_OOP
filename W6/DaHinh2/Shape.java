@@ -1,6 +1,6 @@
 package W6.DaHinh2;
 
-public class Shape {
+public abstract class Shape {
     //attribute
     protected String color;
     protected boolean filled;
@@ -23,11 +23,11 @@ public class Shape {
     //getter
     public String getColor() {return color;}
     public boolean isFilled() {return filled;}
-    public double getArea() {return 0;}
-    public double getPerimeter() {return 0;}
+    abstract public double getArea();
+    abstract public double getPerimeter();
     //toString 
     @Override
     public String toString(){
-        return "color=" + color + ",filled=" + filled;
+        return "Shape[color=" + color + ",filled=" + filled + "]";
     }
 }

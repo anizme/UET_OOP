@@ -15,15 +15,15 @@ public class Circle extends Shape {
         center = new Point(0, 0);
         radius = r;
     }
-    public Circle(double r, String s, boolean b) {
-        super(s, b);
-        radius = r;
+    public Circle(double radius, String color, boolean filled) {
+        super(color, filled);
+        this.radius = radius;
         center = new Point(0, 0);
     }
-    public Circle(Point c, double r, String s, boolean b) {
-        super(s, b);
-        center = c;
-        radius = r;
+    public Circle(Point center, double radius, String color, boolean filled) {
+        super(color, filled);
+        this.center = center;
+        this.radius = radius;
     }
     //setter
     public void setCenter(Point center) {

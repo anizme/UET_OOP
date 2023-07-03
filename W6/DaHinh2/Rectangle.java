@@ -12,33 +12,33 @@ public class Rectangle extends Shape{
         width = 0;
         length = 0;
     }
-    public Rectangle(double w, double l) {
+    public Rectangle(double width, double length) {
         super();
-        width = w;
-        length = l;
+        this.width = width;
+        this.length = length;
         topLeft = new Point(0, 0);
     }
-    public Rectangle(double w, double l, String s, boolean b) {
-        super(s, b);
-        width = w;
-        length = l;
+    public Rectangle(double width, double length, String color, boolean filled) {
+        super(color, filled);
+        this.width = width;
+        this.length = length;
         topLeft = new Point(0, 0);
     }
-    public Rectangle(Point p, double w, double l, String s, boolean b) {
-        super(s, b);
-        topLeft = p;
-        width = w;
-        length = l;
+    public Rectangle(Point topLeft, double width, double length, String color, boolean filled) {
+        super(color, filled);
+        this.topLeft = topLeft;
+        this.width = width;
+        this.length = length;
     }
     //setter
-    public void setWidth(double w) {
-        width = w;
+    public void setWidth(double width) {
+        this.width = width;
     }
-    public void setLength(double l) {
-        length = l;
+    public void setLength(double length) {
+        this.length = length;
     }
-    public void setTopLeft(Point t) {
-        topLeft = t;
+    public void setTopLeft(Point topLeft) {
+        this.topLeft = topLeft;
     }
     //getter
     public double getWidth() {return width;}
@@ -58,6 +58,6 @@ public class Rectangle extends Shape{
     //toString
     @Override
     public String toString(){
-        return "Rectangle[" + "topLeft=" + topLeft.toString() + ",width=" + width + ",length=" + length + "," + super.toString() + "]";
+        return "Rectangle[topLeft=" + topLeft.toString() + ",width=" + width + ",length=" + length + ",color=" + color + ",filled=" + filled + "]";
     }
 }
