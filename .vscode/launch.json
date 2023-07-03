@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "W6.DaHinh1.Main",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Student",
+            "request": "launch",
+            "mainClass": "W6.DaHinh1.Student",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "W6.DaHinh2.Main",
+            "projectName": "JAVA_71bdb5a6"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "W5.Kethua2.Main",
             "projectName": "JAVA_71bdb5a6"
         },
