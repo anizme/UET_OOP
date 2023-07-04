@@ -9,7 +9,7 @@ public class Student {
         name = "Student";
         id = "000";
         group = "K62CB";
-        email = "uet@.vnu.edu.vn";
+        email = "uet@vnu.edu.vn";
     }
     public Student(String name, String id, String email){
         this.name = name;
@@ -17,21 +17,21 @@ public class Student {
         this.email = email;
         group = "K62CB";
     }
-    public Student(Student s){
-        this.name = s.getName();
-        this.id = s.getId();
-        this.group = s.getGroup();
-        this.email = s.getEmail();
+    public Student(Student student){
+        this.name = student.getName();
+        this.id = student.getId();
+        this.group = student.getGroup();
+        this.email = student.getEmail();
     }
 
     public String getName() {return name;}
-    public void setName(String n) {name = n;}
+    public void setName(String name) {this.name = name;}
     public String getId() {return id;}
-    public void setId(String i) {id = i;}
+    public void setId(String id) {this.id = id;}
     public String getGroup() {return group;}
-    public void setGroup(String g) {group = g;}
+    public void setGroup(String group) {this.group = group;}
     public String getEmail() {return email;}
-    public void setEmail(String e) {email = e;}
+    public void setEmail(String email) {this.email = email;}
 
     public String getInfo(){
         return getName() + " - " + getId() + " - " + getGroup() + " - " + getEmail();

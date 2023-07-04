@@ -2,60 +2,75 @@ package W2;
 import java.util.Scanner;
 
 public class StudentManagement {
-    private Student[] students;
+    private Student[] students = new Student[100];;
 
-    public StudentManagement(){
-        students = new Student[0];
-    }
-    public static boolean sameGroup(Student s1, Student s2){
-        return s1.getGroup() == s2.getGroup();
-    }
-    public void addStudent(Student newStudent){
-        int n = students.length + 1;
-        Student[] newStudents = new Student[n];
-        for(int i = 0; i < n - 1; i++){
-            newStudents[i] = students[i];
+    public StudentManagement() {
+        for(int i = 0; i < 100; i ++){
+            students[i] = new Student();
         }
-        newStudents[n - 1] = newStudent;
-        students = newStudents;
+    }
+
+    public static boolean sameGroup(Student s1, Student s2){
+        return s1.getGroup().equals(s2.getGroup());
+    }
+
+    public void addStudent(Student newStudent){
+        for(int i = 0; i < 100; i++) {
+            if(students[i].getId().equals("000")){
+                students[i] = new Student(newStudent);
+                break;
+            }
+        }
     }
     public String studentsByGroup(){
+        boolean[] isPrinted = new boolean[100];
         String ans = "";
-        for(int i = 0; i < students.length; i++){
-            ans = ans + students[i].getInfo() + "\n";
+        for(int i = 0; i < 100; i++){
+            if(students[i].getId().equals("000")) return ans;
+            else if(!isPrinted[i]) {
+                isPrinted[i] = true;
+                ans = ans + students[i].getGroup() + "\n" + students[i].getInfo() + "\n";
+                for(int j = i + 1; j < 100; j++) {
+                    if(students[j].getId().equals("000")) break;
+                    if(sameGroup(students[j], students[i])) {
+                        isPrinted[j] = true;
+                        ans = ans + students[j].getInfo() + "\n";
+                    }
+                }
+            }
         }
         return ans;
     }
     public void removeStudent(String id){
-        int idx = students.length;
-        for(int i = 0; i < students.length; i++){
-            if(id.equals(students[i].getId())) idx = i;
+        for(int i = 0; i < 100; i++){
+            if(students[i].getId().equals(id)) {
+                for(int j = i; j < 99; j++) {
+                    students[j] = students[j + 1];
+                }
+                students[99] = new Student();
+                return;
+            }
         }
-        Student[] newStudents = new Student[students.length - 1];
-        if(idx >= students.length) return;
-        for(int i = 0; i < idx; i++){
-            newStudents[i] = students[i];
-        }
-        for(int i = idx; i < students.length - 1; i++){
-            newStudents[i] = students[i + 1];
-        }
-        students = newStudents;
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         StudentManagement list = new StudentManagement();
-        System.out.println("Number of students: ");
-        int n = sc.nextInt();
-        for(int i = 0; i < n; i++){
-            Student s = new Student("Ani_" + Integer.toString(i), "2202_" + Integer.toString(i), "2202" + Integer.toString(i) + "@vnu.edu.vn");
-            list.addStudent(s);
-        }
-        System.out.println("List of students CA-CLC2: ");
-        System.out.println(list.studentsByGroup());
-        list.removeStudent("2202_1");
-        System.out.println("List of students in CA-CLC2 after removed: ");
-        System.out.println(list.studentsByGroup());
-
+        Student s = new Student("Hai Anh", "22028162", "haianhsone291124@gmail.com");
+        s.setGroup("CACLC2");
+        Student s1 = new Student("Anh Quoc", "22028161", "quocat1k29@gmail.com ");
+        s1.setGroup("CACLC2");
+        Student s2 = new Student("Anh Khoa", "22028160", "anhkhoa@gmail.com");
+        s2.setGroup("CACLC3");
+        Student s3 = new Student("Hoang Vu", "22021111", "vuniem@gmail.com ");
+        s3.setGroup("K67CB");
+        list.addStudent(s);
+        list.addStudent(s1);
+        list.addStudent(s2);
+        list.addStudent(s3);
+        System.out.println(list.studentsByGroup() + "\n");
+        list.removeStudent("22028162");
+        System.out.println("Sau khi xoa Hai Anh:");
+        System.out.println(list.studentsByGroup() + "\n");
         sc.close();
     }
 }
