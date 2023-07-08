@@ -23,6 +23,13 @@ public class Person {
     public void addVehicle(Vehicle vehicle) {
         vehicleList.add(vehicle);
     }
+    public void removeVehicle(String registrationNumber) {
+        for(int i = 0; i < vehicleList.size(); i++) {
+            if(vehicleList.get(i).getRegistrationNumber() == registrationNumber){
+                vehicleList.remove(i);
+            }
+        }
+    }
     //getter
     public String getName() {return name;}
     public String getAddress() {return address;}

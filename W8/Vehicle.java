@@ -29,7 +29,7 @@ public abstract class Vehicle {
     //getter
     public String getBrand() {return brand;}
     public String getModel() {return model;}
-    public String getRegistrationNumbet() {return registrationNumber;}
+    public String getRegistrationNumber() {return registrationNumber;}
     public Person getOwner() {return owner;}
     //abstract method
     abstract public String getInfo();

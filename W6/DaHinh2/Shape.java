@@ -6,8 +6,6 @@ public abstract class Shape {
     protected boolean filled;
     //constructor
     public Shape(){
-        color = "RED";
-        filled = true;
     }
     public Shape(String color, boolean filled){
         this.color = color;

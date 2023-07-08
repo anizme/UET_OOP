@@ -32,4 +32,10 @@ public class Square extends Rectangle {
     public String toString() {
         return "Square[topLeft=" + topLeft + ",side=" + getLength() + ",color=" + color + ",filled=" + filled + "]";
     }
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Square == false) return false;
+        return (topLeft.equals(((Square)obj).getTopLeft()) && 
+                Math.abs(width - ((Square)obj).getSide()) <= 0.001);
+    }
 }

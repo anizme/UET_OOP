@@ -14,8 +14,8 @@ public class Main {
             System.out.println(e);
         }*/
         Customer c1 = new Customer(22028162, "Le Thi Hai Anh");
-        Account c1_a1 = new SavingsAccount(291125, 10000);
-        Account c1_a2 = new CheckingAccount(291100, 10000);
+        Account c1_a1 = new SavingsAccount(291125, 0);
+        Account c1_a2 = new CheckingAccount(291100, 0);
         c1.addAccount(c1_a1);
         c1.addAccount(c1_a2);
         bank.addCustomer(c1);

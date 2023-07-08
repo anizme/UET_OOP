@@ -3,13 +3,9 @@ import java.util.ArrayList;
 
 public class Account {
     //attribute
-    private double balance;
-    private ArrayList<Transaction> transactionList;
-    //constructor
-    public Account(){
-        balance = 0;
-        transactionList = new ArrayList<Transaction>();
-    }
+    private double balance = 0;
+    private ArrayList<Transaction> transactionList = new ArrayList<Transaction>();;
+
     //method
     private void deposit(double amount){
         if(amount <= 0) System.out.println("So tien ban nap vao khong hop le!");

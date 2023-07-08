@@ -24,7 +24,7 @@ public class Point {
         return Math.sqrt((pointX - other.getPointX()) * (pointX - other.getPointX()) + (pointY - other.getPointY()) * (pointY - other.getPointY()));
     }
     public boolean equals(Object obj) {
-        if(distance((Point) obj) == 0) return true;
+        if(obj instanceof Point && distance((Point) obj) == 0) return true;
         else return false;
     }
     //hashCode

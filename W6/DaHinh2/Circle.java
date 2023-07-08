@@ -43,7 +43,7 @@ public class Circle extends Shape {
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Circle == false) return false;
-        return (center.equals(((Circle)obj).getCenter()) && radius == ((Circle)obj).getRadius());
+        return (center.equals(((Circle)obj).getCenter()) && Math.abs(radius - ((Circle)obj).getRadius()) <= 0.001);
     }
     //hashCode
 

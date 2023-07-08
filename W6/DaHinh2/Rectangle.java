@@ -51,7 +51,9 @@ public class Rectangle extends Shape{
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Rectangle == false && obj instanceof Square == false) return false;
-        return (topLeft.equals(((Rectangle)obj).getTopLeft()) && width == ((Rectangle)obj).getWidth() && length == ((Rectangle)obj).getLength());
+        return (topLeft.equals(((Rectangle)obj).getTopLeft()) && 
+                Math.abs(width - ((Rectangle)obj).getWidth()) <= 0.001 &&
+                Math.abs(length - ((Rectangle)obj).getLength()) <= 0.001);
     }
     //hashCode
 
